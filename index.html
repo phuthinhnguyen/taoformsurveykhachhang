@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        h3{
+            margin: 10px 20px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .please{
+            margin: 10px 20px; 
+            color: gray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-bottom: 1px dotted black;
+            padding-bottom: 10px;
+        }
+        div{
+         
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 20px;
+        }
+        div:hover{
+            cursor: pointer;
+           
+        }
+        div:focus-within{
+          background-color: lightyellow;
+        }
+        label{
+            margin: 10px 10px 10px 0px;
+            display: block;
+        }
+        select{
+            width: 50%;
+            height: 25px;
+        }
+        .gender label, .product label, .timeuse label{
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 10px;
+            margin-top: 0;
+        }
+        .gender .labelgender, .product .productlabel, .timeuse .timeuselabel{
+           font-weight: bold;
+           margin-left: 0;
+        }
+        .gender input[type="text"]{
+            margin-left: 30px;
+        }
+        .pay span{
+            margin: 0 5px;
+        }
+        .dollarsspan{
+            margin-right: 20px;
+        
+        }
+        .centsspan{
+            margin-left: 50px;
+        }
+        textarea{
+            width: 100%;
+            resize: none;
+        }
+        .rate{
+            color: gray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        tr,td{
+            border: 1px solid gray;
+        }
+        td{
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+            text-align: center;
+        }
+        .td1,.td2,.td3{
+            font-weight: bold;
+            text-align: left;
+        }   
+        tr:nth-child(odd){
+            background-color: lightgray;
+        }
+        button{
+            margin: 10px 0 10px 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            width: 80px;
+            height: 24px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+<form action="" >
+    <h3>Market Research Survey</h3>
+    <p class="please">Please take a few moments to complete this satisfaction survey.</p>
+    <div class="age">
+        <label for="age">What is your age range?</label>
+        <select name="age" id="">
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-50">35-50</option>
+            <option value="50+">50+</option>
+        </select>
+    </div>
+    <div>
+        <label for="salary">What is your yearly income range?</label>
+        <select name="salary" id="">
+            <option value="0-25000">$0-$25,000</option>
+            <option value="25001-50000">$25,001-$50,000</option>
+            <option value="50001-100000">$50,001-$100,000</option>
+            <option value="100000+">$100,000+</option>
+        </select>
+    </div>
+    <div class="gender">
+        <label class="labelgender" for="gender">Gender Identity</label><br>
+       <input type="radio" name="gender" value="male"><label for="gender">Male</label><br>
+       <input type="radio" name="gender" value="female"><label for="gender">Female</label><br>
+       <input type="radio" name="gender" value="nonbinary"><label for="gender">Nonbinary</label><br>
+       <input type="radio" name="gender" value="other"><label for="gender">Other</label><br>
+        <input type="text" maxlength="250" name="gender">
+    </div>
+    <div class="product">
+        <label class="productlabel" for="product">Which of the following products have your purchased in the last 2 months. Please check all that apply.</label><br>
+       <input type="checkbox" name="product" value="product1"><label for="product">Product 1</label><br>
+       <input type="checkbox" name="product" value="product2"><label for="product">Product 2</label><br>
+       <input type="checkbox" name="product" value="product3"><label for="product">Product 3</label>
+    </div>
+    <div class="timeuse">
+        <label class="timeuselabel" for="timeuse">How often would you use our new product?</label><br>
+       <input type="radio" name="timeuse" value="daily"><label for="timeuse">Daily</label><br>
+       <input type="radio" name="timeuse" value="weekly"><label for="timeuse">Weekly</label><br>
+       <input type="radio" name="timeuse" value="monthly"><label for="timeuse">Monthly</label>
+    </div>
+    <div class="pay">
+        <label for="pay">What would you pay for the new product?</label>
+        <span>$</span><input type="text" name="dollars" id="" size="6"><span>.</span><input type="text" name="cents" id="" size="1" maxlength="2" >
+       <div><span class="dollarsspan">Dollars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="centsspan">Cents</span></div>
+    </div>
+    <div>
+        <label for="features">What features would you like to see in the new product.</label>
+        <textarea name="features" id="" rows="8"></textarea>
+    </div>
+    <div>
+        <p class="rate">Please rate your level of agreement with the following statements.</p>
+        <table>
+            <tr>
+                <td></td>
+                <td>Strongly Disagree</td>
+                <td>Disagree</td>
+                <td>Agree</td>
+                <td>Strongly Agree</td>
+            </tr>
+            <tr>
+                <td class="td1">Our products are priced fairly.</td>
+                <td><input type="radio" name="fairly" id="" value="fairly1"><br>1</td>
+                <td><input type="radio" name="fairly" id="" value="fairly2"><br>2</td>
+                <td><input type="radio" name="fairly" id="" value="fairly3"><br>3</td>
+                <td><input type="radio" name="fairly" id="" value="fairly4"><br>4</td>
+            </tr>
+            <tr>
+                <td class="td2">Our products are high quality.</td>
+                <td><input type="radio" name="quality" id="" value="quality1"><br>1</td>
+                <td><input type="radio" name="quality" id="" value="quality2"><br>2</td>
+                <td><input type="radio" name="quality" id="" value="quality3"><br>3</td>
+                <td><input type="radio" name="quality" id="" value="quality4"><br>4</td>
+            </tr>
+            <tr>
+                <td class="td3">You could recommend our product to a friend or coworker.</td>
+                <td><input type="radio" name="recommend" id="" value="recommend1"><br>1</td>
+                <td><input type="radio" name="recommend" id="" value="recommend2"><br>2</td>
+                <td><input type="radio" name="recommend" id="" value="recommend3"><br>3</td>
+                <td><input type="radio" name="recommend" id="" value="recommend4"><br>4</td>
+            </tr>
+        </table>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+    
+</body>
+</html>
